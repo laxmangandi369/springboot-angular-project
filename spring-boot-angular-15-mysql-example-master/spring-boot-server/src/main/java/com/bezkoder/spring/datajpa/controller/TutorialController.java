@@ -31,6 +31,15 @@ public class TutorialController {
 
 	@GetMapping("/tutorials")
 	public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
+		
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
 		try {
 			List<Tutorial> tutorials = new ArrayList<Tutorial>();
 
