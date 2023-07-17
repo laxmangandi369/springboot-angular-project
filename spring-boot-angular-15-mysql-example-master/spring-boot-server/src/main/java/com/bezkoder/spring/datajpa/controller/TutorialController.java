@@ -61,7 +61,12 @@ public class TutorialController {
 	@GetMapping("/tutorials/{id}")
 	public ResponseEntity<Tutorial> getTutorialById(@PathVariable("id") long id) {
 		
-		System.out.println("testing");System.out.println("testing");System.out.println("testing");System.out.println("testing");System.out.println("testing");System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
+		System.out.println("testing");
 		Optional<Tutorial> tutorialData = tutorialRepository.findById(id);
 
 		if (tutorialData.isPresent()) {
@@ -72,7 +77,8 @@ public class TutorialController {
 	}
 
 	@PostMapping("/tutorials")
-	public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) {
+	public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) 
+		
 		try {
 			Tutorial _tutorial = tutorialRepository
 					.save(new Tutorial(tutorial.getTitle(), tutorial.getDescription(), false));
